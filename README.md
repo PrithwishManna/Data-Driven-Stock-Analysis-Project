@@ -1,15 +1,22 @@
-Data-Driven Stock Analysis using Time Series Models
-📈 Predictive Modeling & Quantitative Portfolio Allocation
-Time Series Analysis 2026 Capstone Project
+# Data-Driven Stock Analysis using Time Series Models
+## 📈 Predictive Modeling & Quantitative Portfolio Allocation
+### Time Series Analysis 2026 Capstone Project
+
 This repository contains the Jupyter Notebook and methodology used to construct a data-driven, risk-optimized ₹10,00,000 virtual portfolio on the StockGro platform. By leveraging historical daily stock data from the National Stock Exchange (NSE), this project implements a quantitative forecasting pipeline that bridges theoretical mathematical modeling with practical capital management.
-🎯 Project Objective
+
+
+## 🎯 Project Objective
+
 To develop an empirical mathematical validation framework utilizing statistical time series models to predict short-term stock prices, evaluate underlying asset stability, and execute a mathematically optimized capital allocation strategy in a live virtual simulator arena.
-🛠️ Tech Stack & Methodology
-Data Sourcing: yfinance API (Daily 'Close' prices from Jan 1, 2021 – Dec 31, 2025).  
-IPYNB
-Preprocessing: Forward-fill (ffill) propagation to protect consecutive row sequences from non-trading intervals; Augmented Dickey-Fuller (ADF) tests for stationarity validation; first-order differencing (d=1) to stabilize variance boundaries. Feature scaling via MinMaxScaler.  
-IPYNB
-+ 1
+
+
+## 🛠️ Tech Stack & Methodology
+
+**Data Sourcing:** 'yfinance' API (Daily 'Close' prices from Jan 1, 2021 – Dec 31, 2025).  
+
+**Preprocessing:** Forward-fill ('ffill') propagation to protect consecutive row sequences from non-trading intervals; Augmented Dickey-Fuller (ADF) tests for stationarity validation; first-order differencing (d=1) to stabilize variance boundaries. Feature scaling via 'MinMaxScaler'.  
+
+
 Forecasting Architecture:
 ARIMA (5, 1, 0): Standard stochastic classical framework capturing structural memory effects and filtering random innovations.  
 IPYNB
