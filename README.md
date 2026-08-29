@@ -12,21 +12,21 @@ To develop an empirical mathematical validation framework utilizing statistical 
 
 ## 🛠️ Tech Stack & Methodology
 
-**Data Sourcing:** 'yfinance' API (Daily 'Close' prices from Jan 1, 2021 – Dec 31, 2025).  
+**Data Sourcing:** `yfinance` API (Daily 'Close' prices from Jan 1, 2021 – Dec 31, 2025).  
 
-**Preprocessing:** Forward-fill ('ffill') propagation to protect consecutive row sequences from non-trading intervals; Augmented Dickey-Fuller (ADF) tests for stationarity validation; first-order differencing (d=1) to stabilize variance boundaries. Feature scaling via 'MinMaxScaler'.  
+**Preprocessing:** Forward-fill ('ffill') propagation to protect consecutive row sequences from non-trading intervals; Augmented Dickey-Fuller (ADF) tests for stationarity validation; first-order differencing (d=1) to stabilize variance boundaries. Feature scaling via `MinMaxScaler`.  
 
+**Forecasting Architecture:**
+ **ARIMA (5, 1, 0):** Standard stochastic classical framework capturing structural memory effects and filtering random innovations.  
 
-Forecasting Architecture:
-ARIMA (5, 1, 0): Standard stochastic classical framework capturing structural memory effects and filtering random innovations.  
-IPYNB
-Facebook Prophet: Additive regression system deployed to capture complex, non-linear variables and piecewise linear trends.  
-IPYNB
-Volatility & Trend Modeling: Log Return Mapping to minimize raw value skewness and Seasonal and Trend decomposition using Loess (STL) to extract isolated Trend, Seasonality, and Remainder noise residuals.  
-IPYNB
-Evaluation Metrics: Root Mean Squared Error (RMSE), Mean Absolute Percentage Error (MAPE), and Directional Accuracy.  
-IPYNB
-📊 Stock Universe (Diversification Strategy)
+ **Facebook Prophet:** Additive regression system deployed to capture complex, non-linear variables and piecewise linear trends.  
+
+**Volatility & Trend Modeling:** Log Return Mapping to minimize raw value skewness and Seasonal and Trend decomposition using Loess (STL) to extract isolated Trend, Seasonality, and Remainder noise residuals.  
+
+**Evaluation Metrics:** Root Mean Squared Error (RMSE), Mean Absolute Percentage Error (MAPE), and Directional Accuracy.  
+
+# 📊 Stock Universe (Diversification Strategy)
+
 To establish a statistically diversified operational universe, assets were extracted across decoupled macroeconomic sectors to limit cluster-risk exposure:
 Sasken Technologies Ltd (IT Sector): Selected via a Forecast-Guided framework. Long-term training windows isolated a strong underlying structural alpha trend.
 Texmaco Rail & Engineering Ltd (Industrial Sector): Selected via a Volatility-Aware strategy. Rolling historical standard deviation filters isolated a predictable risk profile resistant to micro-structural drops.
